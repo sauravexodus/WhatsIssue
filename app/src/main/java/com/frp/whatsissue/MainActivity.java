@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.frp.whatsissue.adapters.IssueAdapter;
 import com.frp.whatsissue.api.GithubService;
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements TextView.OnEditor
                 progressBar.setVisibility(View.GONE);
                 emptyScreen.setVisibility(View.VISIBLE);
                 emptyScreemText.setText(R.string.error_screen_string);
+                Toast.makeText(MainActivity.this, "No issues found.", Toast.LENGTH_SHORT).show();
                 return;
             }
             IssueAdapter adapter = new IssueAdapter(MainActivity.this);
