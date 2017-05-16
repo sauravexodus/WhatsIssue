@@ -34,6 +34,8 @@
             android:textColorHint="@android:color/tertiary_text_light"
             android:background="@android:color/transparent"
             android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:inputType="text"
             android:hint="@string/search_hint"/>
 
     </LinearLayout>
@@ -43,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/search_bar_layout"
-        android:paddingTop="16dp"
+        android:paddingTop="8dp"
         android:visibility="gone"
         android:paddingBottom="16dp"
         android:clipToPadding="false"/>
